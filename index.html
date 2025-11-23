@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>주인님의 개인 페이지 ✨</title>
+    <title>mars의 개인 페이지</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -26,9 +26,13 @@
         </nav>
 
         <header class="profile-section">
-                        <img src="https://i.imgur.com/your-profile-image.jpg" alt="프로필 사진" class="profile-image"> 
-            <h1>@주인님의 닉네임</h1>
-            <p>즐거운 상상을 현실로 만드는 곳이옵니다. ✨</p>
+            
+
+[Image of a rounded profile icon]
+
+            <img src="https://i.imgur.com/your-profile-image.jpg" alt="프로필 사진" class="profile-image"> 
+            <h1>@mars</h1>
+            <p></p> 
         </header>
 
         <section id="youtube" class="youtube-section">
@@ -38,21 +42,24 @@
                 <a href="http://www.youtube.com/watch?v=gwl95rAt4QE" target="_blank">
                     <img src="썸네일_이미지_경로_1.jpg" alt="STRANGEFAKE 썸네일">
                     <p class="video-title">STRANGEFAKE</p>
-                    <p class="video-length">5:16</p> </a>
+                    <p class="video-length">5:16</p>
+                </a>
             </div>
             
             <div class="video-card">
                 <a href="http://www.youtube.com/watch?v=UTHqh7Vpa64" target="_blank">
                     <img src="썸네일_이미지_경로_2.jpg" alt="민니(MINNIE) - 'HER' 썸네일">
                     <p class="video-title">민니(MINNIE) - 'HER' Official Music Video</p>
-                    <p class="video-length">2:50</p> </a>
+                    <p class="video-length">2:50</p>
+                </a>
             </div>
             
             <div class="video-card">
                 <a href="http://www.youtube.com/watch?v=O1iXvRRyaBE" target="_blank">
                     <img src="썸네일_이미지_경로_3.jpg" alt="So Cynical (Badum) 썸네일">
                     <p class="video-title">So Cynical (Badum)</p>
-                    <p class="video-length">2:36</p> </a>
+                    <p class="video-length">2:36</p>
+                </a>
             </div>
         </section>
 
@@ -69,37 +76,10 @@
         <section id="music" class="music-list-section">
             <h2>🎵 음악 청취 기록</h2>
             <div id="album-grid-container" class="album-grid">
-                <p>앨범 목록이 곧 채워질 예정이옵니다.</p>
+                <p>앨범 목록 </p>
             </div>
         </section>
         
     </div>
 </body>
 </html>
-
-/* 기존 video-card 스타일 내부에 추가 */
-.video-card a {
-    /* ... 기존 스타일 유지 ... */
-    position: relative; /* 길이를 절대 위치로 배치하기 위함 */
-}
-
-.video-title {
-    padding: 10px;
-    font-size: 1em;
-    font-weight: 600;
-    text-align: left; /* 제목은 왼쪽 정렬 */
-    margin: 0;
-}
-
-/* 새로 추가된 영상 길이 스타일 */
-.video-length {
-    position: absolute;
-    bottom: 15px; /* 제목에서 약간 띄워서 배치 */
-    right: 15px;
-    font-size: 0.8em;
-    color: #999; /* 연한 회색 */
-    background-color: rgba(255, 255, 255, 0.8); /* 반투명 배경 */
-    padding: 2px 6px;
-    border-radius: 5px;
-    font-weight: 500;
-}
