@@ -2,7 +2,7 @@
 /* 1. 색상 변수 및 기본 설정 */
 /* ================================== */
 :root {
-    /* 🌟 강조색: #7CA7EB (부드러운 하늘색) */
+    /* 강조색: #7CA7EB (부드러운 하늘색) */
     --color-main: #7CA7EB; 
     --color-text: #A9B9CF; /* 글자색: #A9B9CF */
     --color-background: #1B1E21; /* 내부 카드 배경색: #1B1E21 */
@@ -21,6 +21,16 @@ body {
     margin: 0;
     padding: 30px 0;
     min-height: 100vh;
+}
+
+.main-container {
+    width: 100%; 
+    max-width: 500px; 
+    background-color: var(--color-background); 
+    padding: 30px 20px;
+    box-shadow: var(--shadow-light); 
+    border-radius: var(--border-radius-large);
+    text-align: center; 
 }
 
 h1, h2, a {
