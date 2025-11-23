@@ -76,3 +76,30 @@
     </div>
 </body>
 </html>
+
+/* 기존 video-card 스타일 내부에 추가 */
+.video-card a {
+    /* ... 기존 스타일 유지 ... */
+    position: relative; /* 길이를 절대 위치로 배치하기 위함 */
+}
+
+.video-title {
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: left; /* 제목은 왼쪽 정렬 */
+    margin: 0;
+}
+
+/* 새로 추가된 영상 길이 스타일 */
+.video-length {
+    position: absolute;
+    bottom: 15px; /* 제목에서 약간 띄워서 배치 */
+    right: 15px;
+    font-size: 0.8em;
+    color: #999; /* 연한 회색 */
+    background-color: rgba(255, 255, 255, 0.8); /* 반투명 배경 */
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-weight: 500;
+}
