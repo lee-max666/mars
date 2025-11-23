@@ -1,171 +1,81 @@
-/* ================================== */
-/* 1. 색상 변수 및 기본 설정 */
-/* ================================== */
-:root {
-    /* 🌟 이 색상들을 변경하여 페이지 전체 분위기를 바꾸시오. */
-    --color-main: #9370DB; /* 라벤더 퍼플 (강조색) */
-    --color-text: #333333; 
-    --color-background: #FFFFFF; /* 내부 카드 배경색 */
-    --color-page-bg: #F0F0F5; /* 브라우저 배경색 */
-    --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
-    --border-radius-large: 20px; /* 큰 요소의 둥근 모서리 */
-}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mars의 개인 페이지</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="main-container"> 
 
-body {
-    background-color: var(--color-page-bg); 
-    font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 30px 0;
-    min-height: 100vh;
-}
+        <nav class="navigation-icon-bar">
+            <a href="#youtube" class="nav-icon-link">
+                <i class="fas fa-video"></i>
+                <span>영상</span>
+            </a>
+            <a href="#blog" class="nav-icon-link">
+                <i class="fas fa-feather-alt"></i>
+                <span>블로그</span>
+            </a>
+            <a href="#music" class="nav-icon-link">
+                <i class="fas fa-headphones-alt"></i>
+                <span>음악</span>
+            </a>
+        </nav>
 
-/* ================================== */
-/* 2. PC-모바일 통일 전략 */
-/* ================================== */
-.main-container {
-    width: 100%; 
-    max-width: 500px; /* PC에서 폭을 제한하여 모바일처럼 보이게 함 */
-    background-color: var(--color-background); 
-    padding: 30px 20px;
-    box-shadow: var(--shadow-light); 
-    border-radius: var(--border-radius-large);
-    text-align: center; 
-}
+        <header class="profile-section">
+            <img src="https://i.imgur.com/your-profile-image.jpg" alt="프로필 사진" class="profile-image"> 
+            <h1>@mars</h1>
+            <p></p> 
+        </header>
 
-/* ================================== */
-/* 3. 상단 아이콘 네비게이션 스타일 */
-/* ================================== */
-.navigation-icon-bar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0;
-    margin-bottom: 25px;
-    background-color: #F8F8F8;
-    border-radius: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
-}
+        <section id="youtube" class="youtube-section">
+            <h2>🎥 주목받는 콘텐츠</h2>
+            
+            <div class="video-card">
+                <a href="http://www.youtube.com/watch?v=gwl95rAt4QE" target="_blank">
+                    <img src="썸네일_이미지_경로_1.jpg" alt="STRANGEFAKE 썸네일">
+                    <p class="video-title">STRANGEFAKE</p>
+                    <p class="video-length">5:16</p>
+                </a>
+            </div>
+            
+            <div class="video-card">
+                <a href="http://www.youtube.com/watch?v=UTHqh7Vpa64" target="_blank">
+                    <img src="썸네일_이미지_경로_2.jpg" alt="민니(MINNIE) - 'HER' 썸네일">
+                    <p class="video-title">민니(MINNIE) - 'HER' Official Music Video</p>
+                    <p class="video-length">2:50</p>
+                </a>
+            </div>
+            
+            <div class="video-card">
+                <a href="http://www.youtube.com/watch?v=O1iXvRRyaBE" target="_blank">
+                    <img src="썸네일_이미지_경로_3.jpg" alt="So Cynical (Badum) 썸네일">
+                    <p class="video-title">So Cynical (Badum)</p>
+                    <p class="video-length">2:36</p>
+                </a>
+            </div>
+        </section>
 
-.nav-icon-link {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    text-decoration: none;
-    color: #666; 
-    font-size: 0.8em;
-    font-weight: 500;
-}
+        <section id="blog" class="link-section">
+            <h2>🔗 바로가기 링크</h2>
+            <a href="인스타그램_링크" target="_blank" class="link-button instagram">
+                ✨ Instagram (인스타그램)
+            </a>
+            <a href="https://blog.naver.com/xenon-818" target="_blank" class="link-button naver-blog">
+                ✍️ 네이버 블로그
+            </a>
+        </section>
 
-.nav-icon-link i {
-    font-size: 1.5em; 
-    margin-bottom: 5px;
-    color: var(--color-main); /* 메인 컬러 적용 */
-}
-
-/* ================================== */
-/* 4. 프로필 및 유튜브 스타일링 */
-/* ================================== */
-.profile-section {
-    margin-bottom: 30px;
-}
-
-.profile-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-/* 모든 섹션 제목에 적용 */
-h2 {
-    text-align: left;
-    margin-top: 40px;
-    margin-bottom: 15px;
-    font-size: 1.3em;
-    color: var(--color-text);
-}
-
-/* 유튜브 영상 카드 스타일 */
-.video-card {
-    margin-bottom: 20px;
-}
-
-.video-card a {
-    display: block;
-    text-decoration: none;
-    color: var(--color-text);
-    background: var(--color-background); 
-    border-radius: 15px; 
-    overflow: hidden; 
-    box-shadow: var(--shadow-light);
-    transition: transform 0.2s;
-    position: relative; /* 영상 길이 위치 지정을 위해 */
-}
-
-.video-card a:hover {
-    transform: translateY(-3px); 
-}
-
-.video-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 15px 15px 0 0; 
-}
-
-.video-title {
-    padding: 10px 15px;
-    font-size: 1em;
-    font-weight: 600;
-    text-align: left;
-    margin: 0;
-}
-
-/* 영상 길이 스타일 */
-.video-length {
-    position: absolute;
-    bottom: 15px; 
-    right: 15px;
-    font-size: 0.8em;
-    color: #FFF; /* 흰색 글씨 */
-    background-color: rgba(0, 0, 0, 0.7); /* 불투명한 검은색 배경 */
-    padding: 2px 6px;
-    border-radius: 5px;
-    font-weight: 500;
-}
-
-/* ================================== */
-/* 5. 링크 버튼 스타일링 */
-/* ================================== */
-
-.link-button {
-    display: block;
-    text-align: center;
-    padding: 16px 20px;
-    margin-bottom: 15px;
-    background-color: var(--color-main); 
-    color: white;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 40px; 
-    box-shadow: var(--shadow-light);
-    transition: background-color 0.3s;
-}
-
-.link-button:hover {
-    background-color: #A98ECF; 
-}
-
-/* ================================== */
-/* 6. 음악 리스트 그리드 스타일 (추후 사용) */
-/* ================================== */
-.album-grid {
-    display: grid;
-    /* 모바일에서는 2열로 시작하여 PC에서 최대 4열까지 유연하게 조정 */
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
-    gap: 15px; 
-    padding: 10px;
-}
+        <section id="music" class="music-list-section">
+            <h2>🎵 음악 청취 기록</h2>
+            <div id="album-grid-container" class="album-grid">
+                <p>앨범 목록이 곧 채워질 예정이옵니다.</p>
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
