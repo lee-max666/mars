@@ -2,8 +2,8 @@
 /* 1. 색상 변수 및 기본 설정 (다크 테마 + 강조색 CB290) */
 /* ================================== */
 :root {
-    /* 🌟 주인님께서 요청하신 새로운 강조색 #CB290 */
-    --color-main: #CB2900; /* 통일된 강조색: 모든 링크 버튼에 사용 */
+    /* 🌟 최종 확정된 강조색 #CB2900 */
+    --color-main: #CB2900; 
     --color-text: #A9B9CF; /* 글자색 (밝은 푸른 회색) */
     --color-background: #1B1E21; /* 내부 카드 배경색 (짙은 차콜) */
     --color-page-bg: #1B1E21; /* 브라우저 배경색 (짙은 차콜) */
@@ -16,34 +16,64 @@ body {
     background-color: var(--color-page-bg); 
     color: var(--color-text);
     font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-    /* ... (나머지 스타일 유지) ... */
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 30px 0;
+    min-height: 100vh;
+}
+
+h1, h2, a {
+    color: var(--color-text); /* 제목, 일반 링크 색상 */
 }
 
 /* ================================== */
-/* 5. 링크 버튼 스타일링 (색상 통일 및 아이콘 제거 반영) */
+/* 3. 상단 아이콘 네비게이션 스타일 수정 */
+/* ================================== */
+.navigation-icon-bar {
+    /* ... (기존 스타일 유지) ... */
+    background-color: var(--color-secondary-bg); 
+}
+
+/* 🌟 아이콘 아래 글자색을 밝은 글자색으로 통일 */
+.nav-icon-link {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-text); /* 👈 이 부분을 수정하여 #A9B9CF 적용 */
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.nav-icon-link i {
+    font-size: 1.5em; 
+    margin-bottom: 5px;
+    color: var(--color-main); /* 아이콘은 강조색 유지 */
+}
+
+/* ================================== */
+/* 4. 프로필 및 유튜브 스타일링 */
+/* ================================== */
+
+/* 유튜브 영상 카드 스타일 */
+.video-card a {
+    background: var(--color-secondary-bg); /* 카드 배경색 조정 */
+    color: var(--color-text);
+    box-shadow: var(--shadow-light);
+}
+
+.video-title {
+    color: var(--color-text); /* 유튜브 제목 글자색도 통일 */
+}
+
+/* ================================== */
+/* 5. 링크 버튼 스타일링 (색상 통일) */
 /* ================================== */
 .link-button {
-    display: block;
-    text-align: center;
-    padding: 16px 20px;
-    margin-bottom: 15px;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 40px; 
-    box-shadow: var(--shadow-light);
-    transition: background-color 0.3s;
-    color: white; /* 텍스트는 흰색 유지 */
+    /* ... (기존 스타일 유지) ... */
 }
 
-/* 🚨 모든 버튼을 통일된 색상으로 변경합니다. */
 .link-button.main-link {
     background-color: var(--color-main); /* #CB2900 */
 }
-
-.link-button.main-link:hover {
-    background-color: #E24800; /* 호버 시 약간 밝게 */
-}
-
-/* 기존의 인스타그램, 네이버 블로그 스타일은 제거하고 위 main-link로 통일 */
-
-/* ... (나머지 스타일 유지) ... */
